@@ -85,6 +85,12 @@ for (let button of buttons) {
             return;
         }
 
+        if (target.classList.contains('operator')) {
+            handleOperator(target.innerText)
+            updateDisplay();
+            return;
+        }
+
         inputDigit(target.innerText);
         updateDisplay()
     });
